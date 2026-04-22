@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // 👉 여기에 네 API 키 넣기
-const API_KEY = "여기에_API키";
+const API_KEY = "7578d97feec449a28b001c18538d22ed";
 
 app.get("/meal", async (req, res) => {
   const today = new Date();
