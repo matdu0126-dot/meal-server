@@ -14,7 +14,7 @@ app.get("/meal", async (req, res) => {
   const d = String(today.getDate()).padStart(2,'0');
   const date = `${y}${m}${d}`;
 
-  const url = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&ATPT_OFCDC_SC_CODE=J10&SD_SCHUL_CODE=7531047&MLSV_YMD=${date}`;
+  const url = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&ATPT_OFCDC_SC_CODE=J10&SCHUL_NM=관인고등학교&MLSV_YMD=${date}`;
 
   try {
     const response = await fetch(url);
