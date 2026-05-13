@@ -2,6 +2,12 @@ const express = require("express");
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const app = express();
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  next();
+});
+
 const PORT = process.env.PORT || 3000;
 
 // 👉 여기에 네 API 키 넣기
